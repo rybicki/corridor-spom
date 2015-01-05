@@ -1,0 +1,24 @@
+The following libraries are required by the C module:
+  - FFTW3
+  - SWIG2
+  - Gnu Scientific Library
+
+The Python module requires:
+  - numpy
+
+The fast SIMD Mersenne Twister random number generation
+library is included in the directory src/dSFMT.
+
+How to build:
+
+1) If not already installed, compile FFTW3 with threads and PIC enabled:
+    ./configure --enable-threads --enable-shared --with-pic
+    make && make install
+
+2) If necessary, edit the Makefile and set the correct paths:
+   - PYTHON_INCLUDES should point to python header directory (e.g. -I/usr/include/python2.7)
+   - NUMPY_INCLUDES should point to numpy header file directory 
+   - FFTW_LIB_PATH should point to the linkable FFTW library files
+
+3) Run make.
+

@@ -1,0 +1,3 @@
+import test_against_reference
+
+test_against_reference.make_references()
